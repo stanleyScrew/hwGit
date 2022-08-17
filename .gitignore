@@ -3,7 +3,9 @@ out/
 target/
 !**/src/main/**/out/
 !**/src/test/**/out/
-/.idea
+.idea/
+/idea/
+/hwGit
 *.iml
 
 ### Eclipse ###
