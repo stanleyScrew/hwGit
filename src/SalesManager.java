@@ -1,5 +1,5 @@
 public class SalesManager {
-    protected int[] sales = {100, 200, 400, 500, 600, 500, 700, 600, 300, 200, 300, 400};
+    protected int[] sales;
 
 
     public SalesManager(int[] sales) {
