@@ -15,4 +15,26 @@ public class SalesManager {
         }
         return max;
     }
+
+    public int caverage() {
+        int max1 = -1;
+        int min = -1;
+        int caver = 0;
+        for (int sale : sales) {
+            if (sale > max1) {
+                max1 = sale;
+            } else {
+                if (sale < min) {
+                    min = sale;
+                }
+            }
+        }
+
+        for (int sale: sales) {
+            if (sale > min && sale < max1) {
+                caver = caver + sale;
+            }
+        }
+        return caver/ sales.length ;
+    }
 }
