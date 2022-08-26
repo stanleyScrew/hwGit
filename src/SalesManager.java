@@ -1,14 +1,14 @@
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
@@ -16,11 +16,11 @@ public class SalesManager {
         return max;
     }
 
-    public int caverage() {
-        int max1 = -1;
-        int min = -1;
-        int caver = 0;
-        for (int sale : sales) {
+    public long caverage() {
+        long max1 = -1;
+        long min = -1;
+        long caver = 0;
+        for (long sale : sales) {
             if (sale > max1) {
                 max1 = sale;
             } else {
@@ -30,7 +30,7 @@ public class SalesManager {
             }
         }
 
-        for (int sale: sales) {
+        for (long sale: sales) {
             if (sale > min && sale < max1) {
                 caver = caver + sale;
             }

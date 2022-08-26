@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 
 public class Main {
-    public static final int SIZE = 11;
+    public static final long SIZE = 11;
     public static void main(String[] args) {
-       int[] volume = {100, 200, 400, 500, 600, 500, 700, 600, 300, 200, 300, 400};
+       long[] volume = {100, 200, 400, 500, 600, 500, 700, 600, 300, 200, 300, 400};
        SalesManager salesManager = new SalesManager(volume);
-       int max = salesManager.max();;
+       long max = salesManager.max();;
        System.out.println("Максимальное значение продаж = " + max);
-       int caver1 = salesManager.caverage();
+       long caver1 = salesManager.caverage();
         System.out.println("Обрезанное среднее = " + caver1);
        }
     }
