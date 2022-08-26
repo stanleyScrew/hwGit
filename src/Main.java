@@ -8,6 +8,8 @@ public class Main {
        int[] volume = {100, 200, 400, 500, 600, 500, 700, 600, 300, 200, 300, 400};
        SalesManager salesManager = new SalesManager(volume);
        int max = salesManager.max();;
-       System.out.println(max);
+       System.out.println("Максимальное значение продаж = " + max);
+       int caver1 = salesManager.caverage();
+        System.out.println("Обрезанное среднее = " + caver1);
        }
     }
