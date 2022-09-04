@@ -1,7 +1,6 @@
 public class SalesManager {
     protected long[] sales;
 
-
     public SalesManager(long[] sales) {
         this.sales = sales;
     }
@@ -16,25 +15,21 @@ public class SalesManager {
         return max;
     }
 
-    public long caverage() {
-        long max1 = -1;
-        long min = -1;
-        long caver = 0;
+    public long min() {
+        long min = Long.MAX_VALUE;
         for (long sale : sales) {
-            if (sale > max1) {
-                max1 = sale;
-            } else {
-                if (sale < min) {
-                    min = sale;
-                }
+            if (sale < min) {
+                min = sale;
             }
         }
+        return min;
+    }
 
-        for (long sale: sales) {
-            if (sale > min && sale < max1) {
-                caver = caver + sale;
-            }
+    public long getAverageSales() {
+        int sum = 0;
+        for (long sale : sales) {
+            sum += sale;
         }
-        return caver/ sales.length ;
+        return (sum - min() - max()) / (sales.length - 2);
     }
 }
